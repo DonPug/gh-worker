@@ -6,7 +6,6 @@ jobs:
   myEvent:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-      - run: echo ${{ github.event.client_payload.sha }}
+      - uses: actions/checkout@v6
+      - run: |
+          echo 'This is a dispatch'
